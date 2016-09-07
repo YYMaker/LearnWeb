@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html>
+    <head>   
+    <title>HTML and CSS: 08. html and body </title>
+    <meta charset="UTF-8">
+    </head>
+
+    <body>
+
+<!--01-->
+    <h3>01. Navigation 1</h3>
+    <p>We just learned about five HTML elements. Now let's see how to use them together to start creating the Airbnb home page.</p>
+    <p>Let's start by adding a navigation menu to the page. This can be done by writing a <strong>ul</strong> element inside the <strong>body</strong> element. A <strong>ul</strong> element describes a bulleted list:</p>
+
+<pre><code class="html xml"><span class="tag"><span class="tag">&lt;<span class="title"><span class="title">ul</span></span>&gt;</span></span>
+  <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">li</span></span>&gt;</span></span>Item 1<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">li</span></span>&gt;</span></span>
+  <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">li</span></span>&gt;</span></span>Item 2<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">li</span></span>&gt;</span></span>
+  <span class="tag"><span class="tag">&lt;<span class="title"><span class="title">li</span></span>&gt;</span></span>Item 3<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">li</span></span>&gt;</span></span>
+<span class="tag"><span class="tag">&lt;/<span class="title"><span class="title">ul</span></span>&gt;</span></span>
+</code></pre>
+
+        <p>Each item in the list is placed inside an <strong>li</strong> element. Each <strong>li</strong> is nested inside the <code class="xml"><span class="tag">&lt;<span class="title">ul</span>&gt;</span>..<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code> tags, as represented by 2 spaces.</p>
+
+    <h4>Instructions</h4>
+    <ol>
+    <li>On line 6</a>, change the <strong>li</strong> element text to your name</li>
+    <li>On line 7</a>, add another <strong>li</strong> element with the text "Browse"</li>
+    </ol>
+
+
+    <textarea rows="10", cols="80" disabled="disabled">
+    <!DOCTYPE html>
+    <html>
+        <body>
+        <ul>
+        <li>Lee</li>
+        <li>Browse</li>
+        </ul>
+        </body>
+    </html>
+    </textarea>
+
+
+<!--02-->
+            <h3>02. Navigation 2</h3>
+            <p>Nice work! Next, let's add another <strong>ul</strong> element to the page with a few more menu options.</p>
+            <h4>Instructions</h4>
+            <ol>
+            <li>After the closing <code class="xml"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code> tag, add another <strong>ul</strong> element</li>
+            <li>Inside the <code class="xml"><span class="tag">&lt;<span class="title">ul</span>&gt;</span>..<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></code> tags, add an <strong>li</strong> element with the text "Sign Up"</li>
+            <li>Add a second <strong>li</strong> element with the text "Log In"</li>
+            <li>Add a third <strong>li</strong> element with the text "Help"</li>
+            </ol>
+    <textarea rows="20", cols="80" disabled="disabled">
+    <!DOCTYPE html>
+    <html>
+    <body>
+    <ul>
+      <li>Lee</li>
+      <li>Browse</li>
+      <li>Item 3</li>
+    </ul>
+    <ul>
+        <li>Sign Up</li>
+        <li>Log In</li>
+        <li>Help</li>
+    </ul>
+    </body>
+    </html>
+    </textarea>
+
+
+<!--03-->
+    <h3>03. Wrap with a div</h3>
+    <p>Cool! We just created a minimal navigation bar for the web page.</p>
+    <p>To stay organized, let's wrap the <strong>ul</strong> elements with two <strong>div</strong>s, like this:</p>
+    <pre><code class="html xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"nav"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>Your Name<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      ...
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">li</span>&gt;</span>Sign Up<span class="tag">&lt;/<span class="title">li</span>&gt;</span>
+      ...
+    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    </code></pre>
+
+    <p>A <strong>div</strong> element groups other elements together into sections of the web page, such as a navigation bar, the main body, and the footer.</p>
+
+    <p>The outer <code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"nav"</span>&gt;</span>..<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code> groups the elements into the navigation bar section of the web page. The inner <code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>..<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code> wraps the contents in a container. We'll use both classes in the next section to style the navigation bar.</p>
+
+    <h4>Instructions</h4>
+    <p>Wrap the <strong>ul</strong> elements with two <strong>div</strong>s, like in the example above. Give the outer div a <code class="ruby"><span class="class"><span class="keyword">class</span>="<span class="title">nav</span>"</span></code> and the inner div a <code class="ruby"><span class="class"><span class="keyword">class</span>="<span class="title">container</span>"</span></code>.</p>
+
+    <textarea rows="20", cols="80" disabled="disabled">
+    <!DOCTYPE html>
+        <html>
+        <body>
+        <div class="nav">
+            <div class="container">
+                <ul>
+                    <li>Lee</li>
+                    <li>Browse</li>
+                    <li>Item 3</li>
+                </ul>
+                <ul>
+                    <li>Sign Up</li>
+                    <li>Log In</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+        </div>
+        </body>
+        </html>
+    </textarea>
+
+<!--04-->
+    <h3>04. Large feature</h3>
+    <p>Nice work! We've used <strong>ul</strong> elements to create a minimal navigation bar, and used <strong>div</strong>s to organize it into its own section.</p>
+
+<p>Next let's add a large feature to the page with an <strong>h1</strong> element, and a subtitle using a <strong>p</strong> element.</p>
+
+    <h4>Instructions</h4>
+    <ol>
+        <li>After the closing <code class="xml"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></code> tag, add an <strong>h1</strong> element that says "Find a place to stay."</li>
+        <li>After the <strong>h1</strong> element, add a <strong>p</strong> element that says "Rent from people in over 34,000 cities and 192 countries."</li>
+    </ol>
+
+    <p>Here's an <strong>h1</strong> element that says "Large feature."</p>
+
+    <pre><code class="html xml"><span class="tag">&lt;<span class="title">h1</span>&gt;</span>Large feature<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+    </code></pre>
+    <p>Here's an <strong>p</strong> element that says "Hello world."</p>
+
+    <pre><code class="html xml"><span class="tag">&lt;<span class="title">p</span>&gt;</span>Hello world<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    </code></pre>
+
+    <textarea rows="24", cols="80" disabled="disabled">
+    <!DOCTYPE html>
+    <html>
+    <body>
+    <div class="nav">
+    <div class="container">
+    <ul>
+      <li>Lee</li>
+      <li>Browse</li>
+      <li>Item 3</li>
+    </ul>
+    <ul>
+        <li>Sign Up</li>
+        <li>Log In</li>
+        <li>Help</li>
+    </ul>
+    </div>
+    </div>
+    <h1>Find a place to stay</h1>
+    <p>Rent from people in over 34,000 cities and 192 countries.</p>
+    </body>
+    </html>
+    </textarea>
+
+
+<!--05-->
+    <h3>05. Wrap with a div</h3>
+    <p>Nicely done! As before, let's group this large feature with two <strong>div</strong>s to stay organized, like this:</p>
+
+    <pre><code class="html xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"jumbotron"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">h1</span>&gt;</span>Find a place to stay.<span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>Rent from people in over 34,000 cities and 192 countries.<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">div</span>&gt;</span> 
+    </code></pre>
+
+    <p>The outer <code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"jumbotron"</span>&gt;</span>..<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code> groups the elements into the large feature section of the web page. The inner <code class="xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span>..<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code> element wraps the contents in a container. We'll use both classes in the next section to style the large feature.</p>
+
+    <h4>Instructions</h4>
+    <p>Wrap the <strong>h1</strong> and <strong>p</strong> elements with two <strong>div</strong>s, like in the example above. Give the outer <strong>div</strong> a <code class="ruby"><span class="class"><span class="keyword">class</span>="<span class="title">jumbotron</span>"</span></code> and the inner <strong>div</strong> a <code class="ruby"><span class="class"><span class="keyword">class</span>="<span class="title">container</span>"</span></code>.</p>
+
+         
+
+
+    <textarea rows="30", cols="80" disabled="disabled">
+<!DOCTYPE html>
+<html>
+  <body>
+  <div class="nav">
+  <div class="container">
+    <ul>
+      <li>Lee</li>
+      <li>Browse</li>
+      <li>Item 3</li>
+    </ul>
+    <ul>
+      <li>Sign Up</li>
+      <li>Log In</li>
+      <li>Help</li>
+    </ul>
+    </div>
+    </div>
+    
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Find a place to stay.</h1>
+      <p>Rent from people in over 34,000 cities and 192 countries.</p>
+    </div>
+  </div> 
+  </body>
+</html>
+
+    </textarea>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
